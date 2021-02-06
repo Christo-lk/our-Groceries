@@ -6,11 +6,12 @@ export default function AddItem () {
   }
 
   function onChange (event) {
-    const { item } = event.target
+    const { item } = event.target.value
     console.log(item)
   }
   return (
     <>
+
       <form onSubmit={onSubmit}>
         <label htmlFor="item">Item:
           <input type="text" name="item" onChange={onChange}></input>
@@ -18,7 +19,6 @@ export default function AddItem () {
         <button>Add</button>
       </form>
 
-      <p>add item my mans </p>
     </>
 
   )

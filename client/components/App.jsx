@@ -19,8 +19,10 @@ const App = () => {
 
   return (
     <>
-      <h1>BOYS GROCERIES BOYS GROCERIES</h1>
-      {user.map(res => <Users key={res.id} data={res}/>)}
+      <h1>our :Groceries</h1>
+      <div className="container">
+        {user.map(res => <Users key={res.id} data={res}/>)}
+      </div>
 
     </>
   )

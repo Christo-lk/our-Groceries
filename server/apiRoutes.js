@@ -11,16 +11,10 @@ router.get('/', (req, res) => {
 })
 
 // GET USER ITEMS
-router.get('/getUserItems', (req, res) => {
-  db.getUserItems(id)
-    .then(apiRes => res.json(apiRes))
-})
-
-// GET ALL ITEMS
-router.get('/getAllItems/:id', (req, res) => {
+router.get('/getUserItems/:id', (req, res) => {
   const id = req.params.id
 
-  db.getAllItems(id)
+  db.getUserItems(id)
     .then(apiRes => res.json(apiRes))
 })
 

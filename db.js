@@ -4,8 +4,8 @@ const db = require('knex')(config)
 
 module.exports = {
   getUsers,
-  getUserItems,
-  getAllItems
+  getUserItems
+
 }
 
 function getUsers () {
@@ -13,14 +13,6 @@ function getUsers () {
 }
 
 function getUserItems (id) {
-  // id = 2
-  return db('users')
-    .join('groceries', 'users.id', 'user_id')
-    .where('users.id', id)
-    .select('item', 'user_id as userId')
-}
-
-function getAllItems (id) {
   return db('users')
     .join('groceries', 'users.id', 'user_id')
     .where('users.id', id)

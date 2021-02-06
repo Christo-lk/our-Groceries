@@ -9,11 +9,6 @@ export function getUsers () {
 }
 
 export function apiGetUserItems (id) {
-  return request.get('/api/v1/getUserItems')
-    .then(res => res.body)
-}
-
-export function apiGetAllItems (id) {
-  return request.get(`/api/v1/getAllItems/${id}`)
+  return request.get(`/api/v1/getUserItems/${id}`)
     .then(res => res.body)
 }

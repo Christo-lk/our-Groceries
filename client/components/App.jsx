@@ -4,17 +4,24 @@ import Users from './Users'
 import { getUsers } from '../api'
 
 const App = () => {
-  console.log('hello')
-
+  // state
   const [user, setUser] = useState([])
 
-  getUsers()
-    .then((res) => console.log(res))
+  // useEffect to re render when state has been updated
+  useEffect(() => {
+    getUsers()
+      .then(result => {
+        setUser(result)
+      })
+  }, [])
+
+  console.log('user', user)
 
   return (
     <>
-      <h1>React development has begun!</h1>
-      <Users/>
+      <h1>BOYS GROCERIES BOYS GROCERIES</h1>
+      {user.map(res => <Users key={res.id} data={res}/>)}
+
     </>
   )
 }

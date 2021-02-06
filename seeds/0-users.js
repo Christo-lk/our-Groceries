@@ -7,7 +7,8 @@ exports.seed = function (knex) {
         { id: 1, name: 'Brad' },
         { id: 2, name: 'Tommy' },
         { id: 3, name: 'Christo' },
-        { id: 4, name: 'ben' }
+        { id: 4, name: 'Ben' },
+        { id: 5, name: 'Household' }
       ])
     })
 }

@@ -16,7 +16,7 @@ export default function AddItem () {
         <label htmlFor="item">Item:
           <input type="text" name="item" onChange={onChange}></input>
         </label>
-        <button>Add</button>
+        <button className='add-button'>Add</button>
       </form>
 
     </>

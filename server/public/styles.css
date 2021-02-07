@@ -21,7 +21,6 @@ h2{
   text-align: center;
 }
 
-
 .container{
   display: flex;
   flex-direction: row;
@@ -29,19 +28,30 @@ h2{
 }
 
 .user-box{
-   border: 1px rgb(204, 201, 201) solid;
+  border: 1px rgb(204, 201, 201) solid;
   border-radius: 5px;
   width: 18%;
 }
 
 .user-box:hover{
   border-color:#00BFE4;
-  background-color: #f1f0f0;
+  background-color: #f1f0f0;  
+}
+
+label{
+  padding-left: 10px; 
   
+   
+}
+
+label:hover{
+  color: #04a2c2;
+  transition: 0.3ms;
 }
 
 input[type=checkbox]{
   float: left;
+  
  }
 
 input[type=checkbox]:checked + label {
@@ -49,13 +59,7 @@ input[type=checkbox]:checked + label {
   text-decoration: line-through;
 } 
 
-label{
-  padding-left: 10px;  
-}
-
-
 button{
-  margin:7px;
   border:none;
   background:none;
   font-weight: bold;
@@ -63,8 +67,14 @@ button{
   outline:none  
 }
 
-button:hover{  
+
+.add-button{
+  margin:7px;  
+}
+
+.add-button:hover{  
   color: #00BFE4;
   background-color: rgba(255, 255, 255, 0.952);
   border-radius: 10px;
 }
+

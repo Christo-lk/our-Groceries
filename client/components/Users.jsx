@@ -14,6 +14,26 @@ function Users (props) {
       .then(result => setItems(result))
   }, [])
 
+  // test box change color on check
+
+  // STATE
+  const [button, showButton] = useState({ background: 'none' })
+  const [buttonText, setButtonText] = useState('')
+
+  // CLICKHANDLER
+  function clickHandler () {
+    console.log('clicked')
+
+    showButton({ background: '#00BFE4' })
+    setButtonText('clear')
+  }
+
+  // ON CLEAR BUTTON CLICK
+  function clearButton () {
+    setButtonText('')
+    showButton({ background: 'none' })
+  }
+
   return (
     <>
       <div className="user-box">
@@ -24,13 +44,13 @@ function Users (props) {
               <ul>
                 <li>
                   <label htmlFor={result.item}> {result.item}</label>
-                  <input type="checkbox" id={result.item} name={result.item}/>
-
+                  <input type="checkbox" onClick={clickHandler} id={result.item} name={result.item}/>
                 </li>
               </ul>
             </>
           )}
           <AddItem/>
+          <button style={button} onClick={clearButton} >{buttonText}</button>
         </div>
       </div>
 

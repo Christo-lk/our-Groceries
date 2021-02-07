@@ -13,20 +13,16 @@ h1{
     font-family: 'Raleway', sans-serif;
     font-size: 45px;
     letter-spacing: 2px;
-
 }
 
 h2{
   letter-spacing: 2px;
-
 }
 
 .container{
   display: flex;
   flex-direction: row;
-  justify-content: space-around ;
-  
-  
+  justify-content: space-around ;  
 }
 
 .user-box{
@@ -45,14 +41,18 @@ h2{
   text-align: center;
 }
 
+input[type=checkbox]:checked + label {
+  color:red;
+  text-decoration: line-through;
+} 
+
 button{
   margin:7px;
   border:none;
   background:none;
   font-weight: bold;
   font-size: 15px;
-  outline:none
-  
+  outline:none  
 }
 
 button:hover{  

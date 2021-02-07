@@ -16,11 +16,29 @@ function Users (props) {
 
   return (
     <>
-      <h2>{props.data.name}</h2>
-      {items.map(result => <li key={result.id}>{result.item}</li>)}
-      <AddItem/>
+      <div className="user-box">
+        <div className="user-list">
+          <h2>{props.data.name}</h2>
+          {items.map(result =>
+            <>
+              <ul>
+                <li>
+                  <label htmlFor={result.item}> {result.item}</label>
+                  <input type="checkbox" id={result.item} name={result.item}/>
+
+                </li>
+              </ul>
+            </>
+          )}
+          <AddItem/>
+        </div>
+      </div>
+
     </>
+
   )
 }
 
 export default Users
+
+{ /* <li key={result.id}>{result.item}</li> */ }

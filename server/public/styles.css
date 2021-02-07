@@ -1,0 +1,70 @@
+body{
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+
+}
+
+li{
+  list-style-type: none;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+h2{
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around ;  
+}
+
+.user-box{
+   border: 1px rgb(204, 201, 201) solid;
+  border-radius: 5px;
+  width: 18%;
+}
+
+.user-box:hover{
+  border-color:#00BFE4;
+  background-color: #f1f0f0;
+  
+}
+
+input[type=checkbox]{
+  float: left;
+ }
+
+input[type=checkbox]:checked + label {
+  color:red;
+  text-decoration: line-through;
+} 
+
+label{
+  padding-left: 10px;  
+}
+
+
+button{
+  margin:7px;
+  border:none;
+  background:none;
+  font-weight: bold;
+  font-size: 15px;
+  outline:none  
+}
+
+button:hover{  
+  color: #00BFE4;
+  background-color: rgba(255, 255, 255, 0.952);
+  border-radius: 10px;
+}

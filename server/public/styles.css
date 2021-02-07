@@ -1,6 +1,7 @@
 body{
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
+  font-size: 20px;
 
 }
 
@@ -17,7 +18,9 @@ h1{
 
 h2{
   letter-spacing: 2px;
+  text-align: center;
 }
+
 
 .container{
   display: flex;
@@ -37,14 +40,19 @@ h2{
   
 }
 
-.user-list{
-  text-align: center;
-}
+input[type=checkbox]{
+  float: left;
+ }
 
 input[type=checkbox]:checked + label {
   color:red;
   text-decoration: line-through;
 } 
+
+label{
+  padding-left: 10px;  
+}
+
 
 button{
   margin:7px;
